@@ -1,0 +1,67 @@
+﻿@model HierarchicalNavigationItem
+
+@if (Model != null && Model.HasChildren)
+{
+	<div>
+		<h2>Sub Navigation for <a href="@Model.Url">@Model.Text</a></h2>
+		<ul data-level="@Model.Level">
+			@Items(Model.Items)
+		</ul>
+	</div>
+}
+
+@helper Items(IEnumerable<HierarchicalNavigationItem> items)
+{
+	@Html.RenderItemsWithHelpers(
+		items,
+		i => i.IsSelected && i.HasChildren, SelectedItemWithChildren,
+		i => i.IsSelected, SelectedItem,
+		i => i.IsExpanded, ExpandedItem,
+		i => i.HasChildren, ItemWithChildren,
+		i => true, RegularItem)
+}
+
+@helper RegularItem(HierarchicalNavigationItem item)
+{
+	<li data-has-children="@item.HasChildren" data-is-expanded="@item.IsExpanded">
+		<a href="@item.Url">@item.Text</a>
+	</li>
+}
+
+@helper ItemWithChildren(HierarchicalNavigationItem item)
+{
+	<li data-has-children="@item.HasChildren" data-is-expanded="@item.IsExpanded">
+		<a href="@item.Url">@item.Text</a>
+	</li>
+}
+
+@helper SelectedItem(HierarchicalNavigationItem item)
+{
+	<li data-has-children="@item.HasChildren" data-is-expanded="@item.IsExpanded">
+		<a href="@item.Url" data-is-selected="@item.IsSelected">
+			<strong>@item.Text</strong>
+		</a>
+	</li>
+}
+
+@helper SelectedItemWithChildren(HierarchicalNavigationItem item)
+{
+	<li data-has-children="@item.HasChildren" data-is-expanded="@item.IsExpanded">
+		<a href="@item.Url" data-is-selected="@item.IsSelected">
+			<strong>@item.Text</strong>
+		</a>
+		<ul data-level="@item.Level">
+			@Items(item.Items)
+		</ul>
+	</li>
+}
+
+@helper ExpandedItem(HierarchicalNavigationItem item)
+{
+	<li data-has-children="@item.HasChildren" data-is-expanded="@item.IsExpanded">
+		<a href="@item.Url">@item.Text</a>
+		<ul data-level="@item.Level">
+			@Items(item.Items)
+		</ul>
+	</li>
+}

@@ -1,0 +1,666 @@
+/* =============================================================================
+ * Editor scope
+ *
+ * Used ONLY in the WYSIWYG editor inside Episerver. Should not be included
+ * in the main css file.
+ *
+ * 1. This needs to come before any other rules as Episerver's parser might
+ *    choke otherwise.
+============================================================================= */
+
+/* =============================================================================
+ * Editor selectable classes
+ * These class names will show up in a dropdown in the WYSIWYG editor in Episerver.
+============================================================================= */
+
+/* Text alignment
+------------------------------------- */
+.t-text-align-left {
+	EditMenuTitle:Text alignment;
+	EditMenuName:Left;
+}
+
+.t-text-align-center {
+	EditMenuName:Center;
+}
+
+.t-text-align-right {
+	EditMenuName:Right;
+}
+
+/* Whitespace
+------------------------------------- */
+.t-clear {
+	EditMenuTitle:Whitespace;
+	EditMenuName:Clear;
+}
+
+.t-nowrap {
+	EditMenuName:No wrap;
+}
+
+
+/* Images
+------------------------------------- */
+img.t-float-left {
+	EditMenuTitle:Image;
+	EditMenuName:Left aligned;
+}
+
+img.t-float-right {
+	EditMenuName:Right aligned;
+} /* [1] */
+/*
+ * Custom breakpoints
+ */ /* medium mobile */ /* Ipad isch */ /* Desktop */
+/*
+ * Text styles
+ */
+
+/*	HEADLINES STYLES */
+/* =============================================================================
+ * Variables
+ *
+ * Colour and type related variables.
+============================================================================= */
+:root {
+	/* COLORS */
+	/* FONT FAMILIES */
+	/* FONT SIZES */
+	/* LINE HEIGHTS */
+	/* FONT CONFIGURATIONS */
+	/* SPACING */ /* 16 */ /* 24 */ /* 32 */ /* 40 */ /* 48 */ /* 56 */
+}
+/* =============================================================================
+ * Text scope
+ *
+ * Adds styling to elements when inside the scope .s-text, e.g. margin
+ * or another font-weight than 'normal'.
+============================================================================= */
+
+/* Margins
+ * Weird syntax for clarity's sake.
+ ---------------------------------------------------------------------------- */
+.s-text h1,
+h1.s-text,
+.s-text h2,
+h2.s-text,
+.s-text h3,
+h3.s-text,
+.s-text h4,
+h4.s-text,
+.s-text h5,
+h5.s-text,
+.s-text h6,
+h6.s-text,
+.s-text ul,
+ul.s-text,
+.s-text ol,
+ol.s-text,
+.s-text dl,
+dl.s-text,
+.s-text blockquote,
+blockquote.s-text,
+.s-text p,
+p.s-text,
+.s-text address,
+address.s-text,
+.s-text hr,
+hr.s-text,
+.s-text table,
+table.s-text,
+.s-text fieldset,
+fieldset.s-text,
+.s-text figure,
+figure.s-text,
+.s-text pre,
+pre.s-text {
+	margin-bottom:24px;
+}
+
+
+/* Headings
+ ---------------------------------------------------------------------------- */
+.s-text h1,
+h1.s-text {
+	background:transparent;
+	color:inherit;
+	font:400 16px/1.5 Arimo, Helvetica, sans-serif;
+	line-height:1.5;
+	text-transform:none;
+	text-shadow:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	font-size:51.2px;
+	font-family:Oswald;
+	line-height:1.3;
+}
+@media (min-width: 800px) {
+	.s-text h1,
+h1.s-text {
+		font-size:67.2px;
+	}
+}
+
+.s-text h2,
+h2.s-text {
+	background:transparent;
+	color:inherit;
+	font:400 16px/1.5 Arimo, Helvetica, sans-serif;
+	line-height:1.5;
+	text-transform:none;
+	text-shadow:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	color:#045389;
+	font-weight:300;
+	font-size:44.8px;
+	font-family:Oswald;
+	line-height:1.3;
+}
+
+.s-text h3,
+h3.s-text {
+	background:transparent;
+	color:inherit;
+	font:400 16px/1.5 Arimo, Helvetica, sans-serif;
+	line-height:1.5;
+	text-transform:none;
+	text-shadow:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	margin-bottom:0.5em;
+	color:#045389;
+	font-size:24px;
+	font-family:Oswald;
+	line-height:1.3;
+}
+
+.s-text h4,
+h4.s-text {
+	background:transparent;
+	color:inherit;
+	font:400 16px/1.5 Arimo, Helvetica, sans-serif;
+	line-height:1.5;
+	text-transform:none;
+	text-shadow:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	color:#045389;
+	font-size:19.2px;
+	font-family:Oswald;
+	line-height:1.3;
+}
+
+.s-text h5,
+h5.s-text {
+	background:transparent;
+	color:inherit;
+	font:400 16px/1.5 Arimo, Helvetica, sans-serif;
+	line-height:1.5;
+	text-transform:none;
+	text-shadow:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	color:#3c3c3c;
+	font-weight:bold;
+	font-size:16px;
+	line-height:1;
+}
+
+.s-text h6,
+h6.s-text {
+	background:transparent;
+	color:inherit;
+	font:400 16px/1.5 Arimo, Helvetica, sans-serif;
+	line-height:1.5;
+	text-transform:none;
+	text-shadow:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	color:#3c3c3c;
+	font-weight:bold;
+	font-size:16px;
+	line-height:1;
+}
+
+/* Inverted heading colors
+ ---------------------------------------------------------------------------- */
+ .s-text--inverted,
+ .s-text--inverted a,
+ .s-text--inverted h1,
+ h1.s-text--inverted,
+ .s-text--inverted h2,
+ h2.s-text--inverted,
+ .s-text--inverted h3,
+ h3.s-text--inverted,
+ .s-text--inverted h4,
+ h4.s-text--inverted,
+ .s-text--inverted h5,
+ h5.s-text--inverted,
+ .s-text--inverted h6,
+ h6.s-text--inverted {
+ 	color: #fff;
+ }
+
+/* Inline typography
+ ---------------------------------------------------------------------------- */
+.s-text i,
+i.s-text,
+.s-text em,
+em.s-text {
+	font-style:italic;
+}
+
+.s-text b,
+b.s-text,
+.s-text strong,
+strong.s-text {
+	font-weight:700;
+}
+
+
+/* Lists
+ *
+ * 1. Remove trailing margins from nested lists.
+ ---------------------------------------------------------------------------- */
+.s-text ul,
+ul.s-text {
+	list-style:disc;
+}
+
+.s-text ol,
+ol.s-text {
+	list-style:decimal;
+}
+
+.s-text ul,
+ul.s-text,
+.s-text ol,
+ol.s-text,
+.s-text dd,
+dd.s-text {
+	margin-left:20px;
+}
+
+.s-text li {
+	margin-bottom:5px;
+}
+
+.s-text li > ul,
+.s-text li > ol {
+	margin-top:5px;
+	margin-bottom:0; /* [1] */
+}
+
+.s-text dt {
+	font-weight:700;
+}
+
+.s-text dd {
+	margin-bottom:10px;
+}
+
+
+/* Tables
+ *
+ * 1. To counter-act top padding on th
+ ---------------------------------------------------------------------------- */
+.s-text table,
+table.s-text {
+	margin-top:-5px; /* [1] */
+}
+
+.s-text caption,
+caption.s-text {
+	padding-bottom:15px;
+	border-bottom:1px solid #ccc;
+}
+
+.s-text th,
+th.s-text {
+	padding:5px 20px 5px 0;
+	border-bottom:1px solid #ccc;
+}
+
+.s-text td,
+td.s-text,
+.s-text tbody th,
+tbody th.s-text {
+	padding:15px 20px 15px 0;
+	border-bottom:1px solid #ccc;
+}
+
+.s-text tfoot,
+tfoot.s-text {
+	font-weight:bold;
+}
+
+/* Images
+ ---------------------------------------------------------------------------- */
+ .s-text img,
+ img.s-text {
+	 margin-bottom:32px;
+ }
+/* =============================================================================
+ * Floats
+============================================================================= */
+.t-float-left {
+	float:left;
+	margin:0 10px 10px 0;
+}
+
+.t-float-right {
+	float:right;
+	margin:0 0 10px 10px;
+}
+/* This trump is based/copy of Svenskttenn */
+
+.t-show-for-medium-up.t-show-for-medium-up,
+.t-show-for-medium-up-block.t-show-for-medium-up-block,
+.t-show-for-medium-up-inline-block.t-show-for-medium-up-inline-block,
+.t-show-for-medium-up-table-cell.t-show-for-medium-up-table-cell,
+.t-show-for-lg.t-show-for-lg,
+.t-show-for-lg-up.t-show-for-lg-up,
+.t-show-for-xl.t-show-for-xl,
+.t-show-for-xxl.t-show-for-xxl,
+.t-show-for-lg-plus.t-show-for-lg-plus {
+	display:none;
+}
+
+@media(min-width: 600px) {
+	.t-show-for-small.t-show-for-small {
+		display:none;
+	}
+
+	.t-show-for-medium-up.t-show-for-medium-up {
+		display:inherit;
+	}
+
+	.t-show-for-medium-up-block.t-show-for-medium-up-block {
+		display:block;
+	}
+
+	.t-show-for-medium-up-inline-block.t-show-for-medium-up-inline-block {
+		display:inline-block;
+	}
+
+	.t-show-for-medium-up-table-cell.t-show-for-medium-up-table-cell {
+		display:table-cell;
+	}
+}
+
+@media(min-width: 800px) {
+	.t-show-on-md-down.t-show-on-md-down {
+		display:none;
+	}
+
+	.t-show-for-lg.t-show-for-lg {
+		display:inherit;
+	}
+
+	.t-show-for-lg-up.t-show-for-lg-up {
+		display:inherit;
+	}
+}
+
+@media(min-width: 1400px) {
+	.t-show-for-xl.t-show-for-xl {
+		display:inherit;
+	}
+}
+/* =============================================================================
+ * Text align
+============================================================================= */
+.t-text-align-center {
+	text-align:center;
+}
+
+.t-text-align-right {
+	text-align:right;
+}
+/* =============================================================================
+ * Text styles
+============================================================================= */
+.t-text-style-alpha.t-text-style-alpha {
+	background:transparent;
+	color:inherit;
+	font:400 16px/1.5 Arimo, Helvetica, sans-serif;
+	line-height:1.5;
+	text-transform:none;
+	text-shadow:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	font-size:32px;
+	line-height:1;
+}
+
+.t-text-style-beta.t-text-style-beta {
+	background:transparent;
+	color:inherit;
+	font:400 16px/1.5 Arimo, Helvetica, sans-serif;
+	line-height:1.5;
+	text-transform:none;
+	text-shadow:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	font-size:24px;
+	line-height:1;
+}
+
+.t-text-style-gamma.t-text-style-gamma {
+	background:transparent;
+	color:inherit;
+	font:400 16px/1.5 Arimo, Helvetica, sans-serif;
+	line-height:1.5;
+	text-transform:none;
+	text-shadow:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	font-style:italic;
+	font-size:12.8px;
+}
+
+.t-text-style-h1[class] {
+	background:transparent;
+	color:inherit;
+	font:400 16px/1.5 Arimo, Helvetica, sans-serif;
+	line-height:1.5;
+	text-transform:none;
+	text-shadow:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	font-size:51.2px;
+	font-family:Oswald;
+	line-height:1.3;
+}
+
+@media (min-width: 800px) {
+	.t-text-style-h1[class] {
+		font-size:67.2px;
+	}
+}
+
+.t-text-style-h2[class] {
+	background:transparent;
+	color:inherit;
+	font:400 16px/1.5 Arimo, Helvetica, sans-serif;
+	line-height:1.5;
+	text-transform:none;
+	text-shadow:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	color:#045389;
+	font-weight:300;
+	font-size:44.8px;
+	font-family:Oswald;
+	line-height:1.3;
+}
+
+.t-text-style-h3[class] {
+	background:transparent;
+	color:inherit;
+	font:400 16px/1.5 Arimo, Helvetica, sans-serif;
+	line-height:1.5;
+	text-transform:none;
+	text-shadow:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	margin-bottom:0.5em;
+	color:#045389;
+	font-size:24px;
+	font-family:Oswald;
+	line-height:1.3;
+}
+
+.t-text-style-hero-h2[class] {
+	background:transparent;
+	color:inherit;
+	font:400 16px/1.5 Arimo, Helvetica, sans-serif;
+	line-height:1.5;
+	text-transform:none;
+	text-shadow:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+	font-size:44.8px;
+	line-height:1.4;
+}
+/* =============================================================================
+ * Visually hidden
+ *
+ * Hidden visually, but screen readers will read it.
+============================================================================= */
+.t-visually-hidden {
+	position:absolute;
+	width:1px;
+	height:1px;
+	clip:rect(1px, 1px, 1px, 1px);
+	padding:0;
+	border:0;
+}
+
+.t-visually-hidden--focusable:active,
+.t-visually-hidden--focusable:focus {
+	position:static;
+	width:auto;
+	height:auto;
+	overflow:visible;
+	clip:auto;
+	margin:0;
+}
+/* =============================================================================
+ * Handle whitespace explicitly
+============================================================================= */
+
+/* Clear all floats */
+.t-clear {
+	clear:both;
+}
+
+/* Avoid all linebreaks */
+.t-nowrap {
+	white-space:nowrap;
+}
+
+.s-editor {
+	background:transparent;
+	color:inherit;
+	font:400 16px/1.5 Arimo, Helvetica, sans-serif;
+	line-height:1.5;
+	text-transform:none;
+	text-shadow:none;
+	word-spacing:normal;
+	letter-spacing:normal;
+}
+
+/* Outlines
+================================================================================ */
+.s-editor p,
+.s-editor td {
+	padding:10px;
+	border:1px solid #eee;
+}
+
+/* Warnings
+================================================================================ */
+
+/* Incorrectly nested elements */
+.s-editor a a,
+.s-editor strong h1,
+.s-editor strong h2,
+.s-editor strong h3,
+.s-editor strong h4,
+.s-editor strong h5,
+.s-editor strong h6,
+.s-editor strong table,
+.s-editor h1 p,
+.s-editor h2 p,
+.s-editor h3 p,
+.s-editor h4 p,
+.s-editor h5 p,
+.s-editor h6 p,
+.s-editor p h1,
+.s-editor p h2,
+.s-editor p h3,
+.s-editor p h4,
+.s-editor p h5,
+.s-editor p h6,
+/* Empty Attributes */
+.s-editor *[class=""],
+.s-editor a[href=""],
+.s-editor *[id=""],
+.s-editor *[title=""],
+/* Disallowed attributes */
+.s-editor *[background],
+.s-editor *[border],
+.s-editor *[cellpadding],
+.s-editor *[cellspacing],
+.s-editor table[height],
+.s-editor form[name],
+.s-editor img[name],
+.s-editor *[valign],
+.s-editor *[alink],
+.s-editor *[bgcolor],
+.s-editor img[border],
+.s-editor br[clear],
+.s-editor *[color],
+.s-editor *[compact],
+.s-editor *[hspace],
+.s-editor *[language],
+.s-editor *[link],
+.s-editor *[noshade],
+.s-editor *[nowrap],
+.s-editor hr[size],
+.s-editor *[start],
+.s-editor *[vlink],
+.s-editor *[vspace],
+.s-editor *[bgproperties],
+.s-editor *[bordercolor],
+.s-editor *[bordercolordark],
+.s-editor *[bordercolorlight],
+/* Empty Elements */
+.s-editor span:empty,
+.s-editor div:empty,
+.s-editor p:empty,
+.s-editor li:empty,
+.s-editor th:empty,
+.s-editor ol:empty,
+.s-editor ul:empty,
+/* Disallowed elements */
+.s-editor applet,
+.s-editor basefont,
+.s-editor blink,
+.s-editor center,
+.s-editor dir,
+.s-editor font,
+.s-editor isindex,
+.s-editor menu,
+.s-editor nobr,
+.s-editor s,
+.s-editor strike,
+.s-editor u,
+.s-editor wbr {
+	border:3px solid #f00 !important;
+}
+
+/*# sourceMappingURL=editor.min.css.map */

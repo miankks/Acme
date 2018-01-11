@@ -1,0 +1,11 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="IncludeFilesOnDeploy">
+	<Target Name="IncludeFilesOnDeploy">
+		<ItemGroup>
+			<GuiFiles Include="$(ProjectDir)gui\**\*" />
+
+			<FilesForPackagingFromProject Include="%(GuiFiles.Identity)">
+				<DestinationRelativePath>gui\%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
+			</FilesForPackagingFromProject>
+		</ItemGroup>
+	</Target>
+</Project>

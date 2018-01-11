@@ -1,0 +1,12 @@
+﻿@model TextLinkBlock
+
+@if (Model.LinkUrl == null)
+{
+	@Model.LinkText
+}
+else
+{
+	<a href="@Url.ContentUrl(Model.LinkUrl)">
+		@Model.LinkText
+	</a>
+}

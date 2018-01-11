@@ -1,0 +1,11 @@
+﻿@model PreviewModel<HomePage>
+
+<h1>Förhandsgranskning av '@Model.PreviewContent.Name'</h1>
+
+@*
+	IsBlockPreview is a constant defined in ViewDataDictionaryExtensions.IsBlockPreview, this view data key needs to be set to
+	true to render e.g. place holder images inside a content area. By default place holder images are not rendered in edit mode inside
+	a content area.
+*@
+
+@Html.DisplayFor(x => Model.ContentArea, new { IsBlockPreview = true })

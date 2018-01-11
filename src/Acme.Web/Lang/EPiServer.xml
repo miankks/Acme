@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+	<language name="svenska" id="sv">
+		<groups>
+			<!-- Tab names -->
+			<TeaserInformation>Puffinformation</TeaserInformation>
+			<seo>SEO</seo>
+			<Form>Formulär</Form>
+			<Header>Sidhuvud</Header>
+			<Footer>Sidfot</Footer>
+			<SiteSettings>Webbplatsinställningar</SiteSettings>
+			<GeneralSettings>Generella inställningar</GeneralSettings>
+
+			<!-- Content groups -->
+			<General>Allmänt</General>
+			<Special>Special</Special>
+			<Local>Lokala</Local>
+			<Settings>Inställningar</Settings>
+		</groups>
+
+		<resolutions>
+			<standard>Standard (1366x768)</standard>
+			<ipadhorizontal>iPad horisontell (1024x768)</ipadhorizontal>
+			<iphonevertical>iPhone vertikal (320x568)</iphonevertical>
+			<androidvertical>Android vertikal (480x800)</androidvertical>
+		</resolutions>
+
+		<tinymce>
+			<optimizededitor>
+				<optimizededitor_desc>TinyMCE-startinställningar [NetRelations]</optimizededitor_desc>
+			</optimizededitor>
+			<contextmenu>
+				<contextmenu_desc>Högerklicksmeny [NetRelations]</contextmenu_desc>
+			</contextmenu>
+		</tinymce>
+
+		<editorstyleoptions>
+			<whitespace>Blanksteg</whitespace>
+			<clear>Radbryt</clear>
+			<no_wrap>Ingen radbrytning</no_wrap>
+			<image>Bilder</image>
+			<left_aligned>Vänsterställd</left_aligned>
+			<right_aligned>Högerställd</right_aligned>
+			<lists>Listor</lists>
+			<tables>Tabeller</tables>
+		</editorstyleoptions>
+	</language>
+	<language name="English" id="en">
+		<groups>
+			<!-- Tab names -->
+			<TeaserInformation>Teaser information</TeaserInformation>
+			<seo>SEO</seo>
+			<Form>Forms</Form>
+			<Header>Header</Header>
+			<Footer>Footer</Footer>
+			<SiteSettings>Website settings</SiteSettings>
+			<GeneralSettings>General settings</GeneralSettings>
+
+			<!-- Content groups -->
+			<General>General</General>
+			<Special>Special</Special>
+			<Local>Local</Local>
+			<Settings>Settings</Settings>
+		</groups>
+
+		<resolutions>
+			<standard>Standard (1366x768)</standard>
+			<ipadhorizontal>iPad horizontal (1024x768)</ipadhorizontal>
+			<iphonevertical>iPhone vertical (320x568)</iphonevertical>
+			<androidvertical>Android vertical (480x800)</androidvertical>
+		</resolutions>
+
+		<tinymce>
+			<optimizededitor>
+				<optimizededitor_desc>TinyMCE-settings [NetRelations]</optimizededitor_desc>
+			</optimizededitor>
+			<contextmenu>
+				<contextmenu_desc>Contextmenu [NetRelations]</contextmenu_desc>
+			</contextmenu>
+		</tinymce>
+
+		<editorstyleoptions>
+			<whitespace>Whitespace</whitespace>
+			<clear>Clear</clear>
+			<no_wrap>No wrap</no_wrap>
+			<image>Image</image>
+			<left_aligned>Left aligned</left_aligned>
+			<right_aligned>Right aligned</right_aligned>
+			<lists>Lists</lists>
+			<tables>Tables</tables>
+		</editorstyleoptions>
+	</language>
+</languages>

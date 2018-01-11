@@ -1,0 +1,12 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="CustomTargets">
+	<PropertyGroup>
+		<ConfigurationPath>$(ProjectDir)_Configuration\</ConfigurationPath>
+	</PropertyGroup>
+	
+	<!-- Include your custom targets here. -->
+	<Import Project="CopyConfigurationFiles.targets" />
+	<Import Project="TransformConfigurationFiles.targets" />
+
+	<!-- This target will be called from the project file. -->
+	<Target Name="CustomTargets" BeforeTargets="BeforeBuild" DependsOnTargets="CopyConfigurationFiles; TransformConfigurationFiles" />
+</Project>

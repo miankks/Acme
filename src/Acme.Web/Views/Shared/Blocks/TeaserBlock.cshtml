@@ -1,0 +1,12 @@
+﻿@model TeaserBlock
+
+
+
+@Html.PropertyImageFor(x => x.Image, new { ImageCssClass = "left", ImageWidth = 100})
+	@Html.PropertyFor(x => x.Heading, new { CustomTag = "h2", ImageCssClass = "right" })
+
+
+<div class="text-color pull-right">
+@Html.PropertyFor(x => x.Text)
+@Html.PropertyFor(x => x.Link)
+</div>

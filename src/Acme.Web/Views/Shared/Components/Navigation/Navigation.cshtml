@@ -1,0 +1,27 @@
+﻿@model List<NavigationItem>
+
+<div>
+	<h2>Navigation</h2>
+	@foreach (var item in Model)
+	{
+		if (item.IsSelected || item.IsExpanded && item.IsStartPage == false)
+		{
+			@SelectedItem(item)
+		}
+		else
+		{
+			@Item(item)
+		}
+	}
+</div>
+
+@helper Item(NavigationItem item)
+{
+	<a href="@item.Url">@item.Text</a>
+}
+
+@helper SelectedItem(NavigationItem item)
+{
+	<a href="@item.Url"><strong>@item.Text</strong></a>
+}
+

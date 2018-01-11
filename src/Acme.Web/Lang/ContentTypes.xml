@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+	<language name="svenska" id="sv">
+		<contenttypes>
+			<!-- Common property names shared between all IContent -->
+			<icontentdata>
+				<properties>
+					<PageTitle>
+						<caption>Titel (om annan än sidans namn)</caption>
+						<help>Ange en titel om denna ska skilja sig från sidans namn. Titeln brukar användas i sökmotorers sökresultat samt i webbläsarens menyrad eller på dess flikar.</help>
+					</PageTitle>
+					<PageHeading>
+						<caption>Rubrik (om annan än sidans namn)</caption>
+						<help>Ange en rubrik om denna ska skilja sig från sidans namn</help>
+					</PageHeading>
+					<MainIntro>
+						<caption>Ingress</caption>
+						<help>Den inledande texten. Renderas med en något större text och används även i listningar som en "lockande" text</help>
+					</MainIntro>
+					<MainBody>
+						<caption>Brödtext</caption>
+						<help>Det huvudsakliga innehållet. Kan vara en blandning av text, bilder, tabeller, länkar etc.</help>
+					</MainBody>
+					<TeaserHeading>
+						<caption>Puffrubrik</caption>
+					</TeaserHeading>
+					<TeaserImage>
+						<caption>Puffbild</caption>
+					</TeaserImage>
+					<TeaserBody>
+						<caption>Pufftext</caption>
+					</TeaserBody>
+					<Keywords>
+						<caption>Nyckelord</caption>
+						<help>Nyckelord för sidan, separerade med mellanslag. Kan användas av sökmotorer för att bedöma sidans relevans</help>
+					</Keywords>
+					<Description>
+						<caption>Sammanfattning</caption>
+						<help>En sammanfattning som kort beskriver sidans innehåll. Kan användas av sökmotorer för att presentera sidan i ett sökresultat</help>
+					</Description>
+					<ExcludePageFromPath>
+						<caption>Utelämna sidan från brödsmulor</caption>
+						<help>Utelämna den här sidan från brödsmulorna på alla sidor</help>
+					</ExcludePageFromPath>
+					<ExcludePageFromSearch>
+						<caption>Utelämna den här sidan från sökning</caption>
+						<help>Låt denna sida tala om för sökmotorer att de inte ska bry sig om den</help>
+					</ExcludePageFromSearch>
+					<Heading>
+						<caption>Rubrik</caption>
+					</Heading>
+					<Image>
+						<caption>Bild</caption>
+					</Image>
+					<Text>
+						<caption>Text</caption>
+					</Text>
+					<Link>
+						<caption>Länk</caption>
+					</Link>
+					<Teasers>
+						<caption>Puffar</caption>
+					</Teasers>
+				</properties>
+			</icontentdata>
+
+			<!-- Page types -->
+			<NoAccessPage>
+				<name>Ej behörig</name>
+				<description>Sida som visas när en besökare inte har behörighet</description>
+			</NoAccessPage>
+			
+			<NotFoundPage>
+				<name>Sidan kan inte hittas</name>
+				<description>Sida som visas när en felaktig adress matats in</description>
+			</NotFoundPage>
+
+			<StandardPage>
+				<name>Vanlig sida</name>
+				<description>En vanlig innehållssida</description>
+			</StandardPage>
+
+			<ContainerPage>
+				<name>Platshållare</name>
+				<description>Generell sida för att gruppera innehåll. Denna sida är aldrig publik</description>
+			</ContainerPage>
+
+			<HomePage>
+				<name>Startsida</name>
+				<description>Webbplatsens startsida</description>
+				<properties>
+					<HelpLinks>
+						<caption>Hjälplänkar</caption>
+						<help>Länkar till ett antal valfria sidor</help>
+					</HelpLinks>
+					<SupplementalNavigation>
+						<caption>Tilläggsnavigering</caption>
+						<help>Länkar till ett antal valfria sidor</help>
+					</SupplementalNavigation>
+				</properties>
+			</HomePage>
+			
+			<!-- Block types -->
+			<TeaserBlock>
+				<name>Puff</name>
+				<description>Puff med rubrik, bild, text och länk</description>
+			</TeaserBlock>
+
+			<TextLinkBlock>
+				<name>Länk med text</name>
+				<description></description>
+				<properties>
+					<LinkText>
+						<caption>Text</caption>
+					</LinkText>
+					<LinkUrl>
+						<caption>Adress</caption>
+					</LinkUrl>
+				</properties>
+			</TextLinkBlock>
+
+			<!-- Media types -->
+			<DocumentMedia>
+				<name>Dokument</name>
+				<description>Innehållstyp för dokument</description>
+				<properties>
+					<Title>
+						<caption>Titel</caption>
+					</Title>
+				</properties>
+			</DocumentMedia>
+
+			<ImageMedia>
+				<name>Bild</name>
+				<description>Innehållstyp för bildfiler</description>
+				<properties>
+					<AlternativeText>
+						<caption>Bildbeskrivning</caption>
+						<description>Beskrivning eller "alt-text" för bilden. Bör alltid anges för bilder som ska visas på webbplatsen och ska vara en beskrivande text som berättar vad bilden föreställer. Är till hjälp för synskadade, men också viktiga för sökmotorer som indexerar sidan.</description>
+					</AlternativeText>
+				</properties>
+			</ImageMedia>
+			
+			<!-- Settings types -->
+			<SiteSettingsBlock>
+				<name>Webbplatsinställningar</name>
+				<properties>
+					<NotFoundPage>
+						<caption>404-sida</caption>
+					</NotFoundPage>
+					<NoAccessPage>
+						<caption>403-sida</caption>
+					</NoAccessPage>
+					<GoogleTagManagerId>
+						<caption>GTM Id</caption>
+						<Help>Google Tag Manager Id</Help>
+					</GoogleTagManagerId>
+				</properties>
+			</SiteSettingsBlock>
+		</contenttypes>
+	</language>
+	<language name="English" id="en">
+		<contenttypes>
+			<!-- Common property names shared between all IContent -->
+			<icontentdata>
+				<properties>
+					<PageTitle>
+						<caption>Title (if different from the page name)</caption>
+						<help>Enter a title if it should be different from the page name. The title is usually used in the search result of search engines, and in the menu bar or tab caption of the browser.</help>
+					</PageTitle>
+					<PageHeading>
+						<caption>Heading (if different from the page name)</caption>
+						<help>Enter a heading if it should be different from the page name</help>
+					</PageHeading>
+					<MainIntro>
+						<caption>Introduction</caption>
+						<help>The introducing text. This text is rendered with a slightly larger font and is also used in listings as a "teasing" text</help>
+					</MainIntro>
+					<MainBody>
+						<caption>Body</caption>
+						<help>The main contents. May be a mix of text, images, tables, links etc.</help>
+					</MainBody>
+					<TeaserHeading>
+						<caption>Teaser heading</caption>
+					</TeaserHeading>
+					<TeaserImage>
+						<caption>Teaser image</caption>
+					</TeaserImage>
+					<TeaserBody>
+						<caption>Teaser text</caption>
+					</TeaserBody>
+					<Keywords>
+						<caption>Keywords</caption>
+						<help>Space-separated keywords for the page. May be used by search engines to measure the page's relevance</help>
+					</Keywords>
+					<Description>
+						<caption>Description</caption>
+						<help>An abstract that describes the contents of the page. May be used by search engines to present the page in a search result</help>
+					</Description>
+					<ExcludePageFromPath>
+						<caption>Exclude this page from bread crumbs</caption>
+						<help>Exclude this page from the bread crumbs on all pages</help>
+					</ExcludePageFromPath>
+					<ExcludePageFromSearch>
+						<caption>Exclude this page from search</caption>
+						<help>Let this page instruct search engines that they should ignore it</help>
+					</ExcludePageFromSearch>
+					<Heading>
+						<caption>Heading</caption>
+					</Heading>
+					<Image>
+						<caption>Image</caption>
+					</Image>
+					<Text>
+						<caption>Text</caption>
+					</Text>
+					<Link>
+						<caption>Link</caption>
+					</Link>
+					<Teasers>
+						<caption>Teasers</caption>
+					</Teasers>
+				</properties>
+			</icontentdata>
+
+			<!-- Page types -->
+			<NoAccessPage>
+				<name>No access</name>
+				<description>A page that is displayed when the user hasn't enough access rights</description>
+			</NoAccessPage>
+
+			<NotFoundPage>
+				<name>Page not found</name>
+				<description>A page that is displayed when a bad URL is entered</description>
+			</NotFoundPage>
+
+			<StandardPage>
+				<name>Standard page</name>
+				<description>A page with regular content</description>
+			</StandardPage>
+
+			<ContainerPage>
+				<name>Container</name>
+				<description>General page for grouping of content that is never visible to the visitor</description>
+			</ContainerPage>
+
+			<HomePage>
+				<name>Start page</name>
+				<description>The website's start page</description>
+				<properties>
+					<HelpLinks>
+						<caption>Help links</caption>
+						<help></help>
+					</HelpLinks>
+					<SupplementalNavigation>
+						<caption>Supplemental navigation</caption>
+						<help></help>
+					</SupplementalNavigation>
+				</properties>
+			</HomePage>
+
+			<!-- Block types -->
+			<TeaserBlock>
+				<name>Teaser</name>
+				<description>A regular teaser with a heading and text</description>
+			</TeaserBlock>
+
+			<TextLinkBlock>
+				<name>Link with text</name>
+				<description></description>
+				<properties>
+					<LinkText>
+						<caption>Text</caption>
+					</LinkText>
+					<LinkUrl>
+						<caption>Address</caption>
+					</LinkUrl>
+				</properties>
+			</TextLinkBlock>
+
+			<!-- Media types -->
+			<DocumentMedia>
+				<name>Document</name>
+				<description>Content type for document files</description>
+				<properties>
+					<Title>
+						<caption>Title</caption>
+					</Title>
+				</properties>
+			</DocumentMedia>
+
+			<ImageMedia>
+				<name>Image</name>
+				<description>Content type for image files</description>
+				<properties>
+					<AlternativeText>
+						<caption>Bildbeskrivning</caption>
+						<description>Beskrivning eller "alt-text" för bilden. Bör alltid anges för bilder som ska visas på webbplatsen och ska vara en beskrivande text som berättar vad bilden föreställer. Är till hjälp för synskadade, men också viktiga för sökmotorer som indexerar sidan.</description>
+					</AlternativeText>
+				</properties>
+			</ImageMedia>
+
+			<!-- Settings types -->
+			<SiteSettingsBlock>
+				<name>Website settings</name>
+				<properties>
+					<NotFoundPage>
+						<caption>404 page</caption>
+					</NotFoundPage>
+					<NoAccessPage>
+						<caption>403 page</caption>
+					</NoAccessPage>
+					<GoogleTagManagerId>
+						<caption>GTM Id</caption>
+						<Help>Google Tag Manager Id</Help>
+					</GoogleTagManagerId>
+				</properties>
+			</SiteSettingsBlock>
+		</contenttypes>
+	</language>
+</languages>

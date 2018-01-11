@@ -1,0 +1,5 @@
+﻿@model PageViewModel<StandardPage>
+
+@Html.PropertyFor(x => x.CurrentPage.PageHeading, new { CustomTag = "h1" })
+@Html.PropertyFor(x => x.CurrentPage.MainIntro, new { CustomTag = "p" })
+@Html.PropertyFor(x => x.CurrentPage.MainBody)

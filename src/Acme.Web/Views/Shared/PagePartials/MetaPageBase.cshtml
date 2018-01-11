@@ -1,0 +1,6 @@
+﻿@model MetaPageBase
+
+@Html.PropertyImageFor(x => x.TeaserImage, new { ImageCssClass = "left", ImageWidth = 300 })
+@Html.PropertyFor(x => x.TeaserHeading, new { CustomTag = "h2" })
+@Html.PropertyFor(x => x.TeaserBody, new { CustomTag = "p" })
+<a href="@Url.PageUrl(Model.ContentLink.ToPageReference())">Click here</a>

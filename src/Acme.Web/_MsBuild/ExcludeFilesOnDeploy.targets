@@ -1,0 +1,6 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<ExcludeFoldersFromDeployment>_Configuration; _MSBuild</ExcludeFoldersFromDeployment>
+		<ExcludeFilesFromDeployment>bower.json; package.json; gruntfile.js; packages.config</ExcludeFilesFromDeployment>
+	</PropertyGroup>
+</Project>

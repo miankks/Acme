@@ -1,0 +1,63 @@
+﻿.epi-icon__layout {
+    height: 26px;
+    width: 36px;
+    border: 1px solid silver;
+}
+
+    .epi-icon__layout:before {
+        content: '';
+        display: block;
+        float: left;
+        width: 36px;
+        height: 26px;
+        background-color: silver;
+    }
+
+    .epi-icon__layout:after {
+        content: '';
+        display: block;
+        float: left;
+        width: 0;
+        height: 26px;
+        background-color: white;
+    }
+
+.epi-icon__layout--three-quarters:before {
+    width: 30px;
+}
+
+.epi-icon__layout--three-quarters:after {
+    width: 6px;
+}
+
+.epi-icon__layout--two-thirds:before {
+    width: 24px;
+}
+
+.epi-icon__layout--two-thirds:after {
+    width: 12px;
+}
+
+.epi-icon__layout--half:before {
+    width: 18px;
+}
+
+.epi-icon__layout--half:after {
+    width: 18px;
+}
+
+.epi-icon__layout--third:before {
+    width: 12px;
+}
+
+.epi-icon__layout--third:after {
+    width: 24px;
+}
+
+.epi-icon__layout--quarter:before {
+    width: 6px;
+}
+
+.epi-icon__layout--quarter:after {
+    width: 30px;
+}

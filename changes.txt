@@ -1,0 +1,7 @@
+Include CSS:
+<link rel="stylesheet" href="/fotbollsaffarengui/css/all.min.css" />
+
+Change to including JS:
+<script src="/fotbollsaffarengui/js/require.js"></script>
+<script src="/fotbollsaffarengui/js/all.min.sv.js"></script>
+Before end </body>

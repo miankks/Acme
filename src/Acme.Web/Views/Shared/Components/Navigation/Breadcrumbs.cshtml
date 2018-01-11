@@ -1,0 +1,26 @@
+﻿@model  List<NavigationItem>
+
+<div>
+	<h2>Breadcrumbs</h2>
+	@Html.Breadcrumbs(Model, Item, SelectedItem, Separator, Ellipsis, 4)
+</div>
+
+@helper Item(NavigationItem breadcrumb, int counter)
+{
+	<a href="@breadcrumb.Url">@breadcrumb.Text</a>
+}
+
+@helper SelectedItem(NavigationItem breadcrumb, int counter)
+{
+	<span>@breadcrumb.Text</span>
+}
+
+@helper Separator()
+{
+<span>,</span> 
+}
+
+@helper Ellipsis(NavigationItem breadcrumb, int counter)
+{
+	<a href="@breadcrumb.Url" title="@breadcrumb.Text">...</a>
+}

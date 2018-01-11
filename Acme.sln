@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Web", "src\Acme.Web\Acme.Web.csproj", "{207243E2-29CC-4A85-A015-B2844636D394}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Domain", "src\Acme.Domain\Acme.Domain.csproj", "{888AA192-3FFB-4E8D-9697-3BDA521E32A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Model", "src\Acme.Model\Acme.Model.csproj", "{738ACBB5-A19B-4E8F-814D-053AA48DFB9B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{261218AF-CC64-46F9-89BF-637E0B9634CE}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		nuget.config = nuget.config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{207243E2-29CC-4A85-A015-B2844636D394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{207243E2-29CC-4A85-A015-B2844636D394}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{207243E2-29CC-4A85-A015-B2844636D394}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{207243E2-29CC-4A85-A015-B2844636D394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{888AA192-3FFB-4E8D-9697-3BDA521E32A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{888AA192-3FFB-4E8D-9697-3BDA521E32A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{888AA192-3FFB-4E8D-9697-3BDA521E32A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{888AA192-3FFB-4E8D-9697-3BDA521E32A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{738ACBB5-A19B-4E8F-814D-053AA48DFB9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{738ACBB5-A19B-4E8F-814D-053AA48DFB9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{738ACBB5-A19B-4E8F-814D-053AA48DFB9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{738ACBB5-A19B-4E8F-814D-053AA48DFB9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D8D18CC-D34A-456C-9CB6-78DDE85B5C7D}
+	EndGlobalSection
+EndGlobal
