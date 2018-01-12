@@ -1,14 +1,17 @@
 ﻿@model TeaserBlock
 
 
-<div class="">
-@Html.PropertyImageFor(x => x.Image, new { ImageCssClass = "left", ImageWidth = 100})
-	<span class="heading-font-size">
-	@Html.PropertyFor(x => x.Heading, new { CustomTag = "h2", ImageCssClass = "right" })
-	</span>
+<div class="row">
+	<div class="col-md-5">
+		@Html.PropertyImageFor(x => x.Image, new { ImageCssClass = "left", ImageWidth = 100 })
+	</div>
+	<div class="col-md-7">
+		@Html.PropertyFor(x => x.Heading, new { CustomTag = "h2", CssClass = "heading-font-size", ImageCssClass = "right" })
+		
+	</div>
 </div>
 
 <div class="text-color">
-@Html.PropertyFor(x => x.Text)
-@Html.PropertyFor(x => x.Link)
+	@Html.PropertyFor(x => x.Text)
+	@Html.PropertyFor(x => x.Link)
 </div>

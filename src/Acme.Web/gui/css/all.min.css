@@ -2515,15 +2515,15 @@ h2.s-text--article {
 	color: #888;
 	font-size: 17px;
 	padding-top: 20px;
+	padding-bottom: 30px;
 	/*font-style: normal;*/
 }
 
 .heading-font-size {
-	font-size: 10px;
+	font-size: 20px;
 }
 
 .color-coach {
 	color: #888;
-	padding-top: 0px;
 }
 /*# sourceMappingURL=all.min.css.map */
