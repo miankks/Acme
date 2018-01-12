@@ -2509,10 +2509,21 @@ h2.s-text--article {
 }
 
 
-/* Css for blocks*/
+/* Css for blocks to improve the design*/
 
 .text-color {
 	color: #888;
+	font-size: 17px;
+	padding-top: 20px;
+	/*font-style: normal;*/
 }
 
+.heading-font-size {
+	font-size: 10px;
+}
+
+.color-coach {
+	color: #888;
+	padding-top: 0px;
+}
 /*# sourceMappingURL=all.min.css.map */

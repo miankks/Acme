@@ -1,6 +1,7 @@
-﻿@model PageViewModel<HomePage>
+﻿@using EPiServer.Shell.Web.UI
+@model PageViewModel<HomePage>
 
-@if(Html.PropertyPlaceHolder(x => x.CurrentPage.SupplementalNavigation))
+@if (Html.PropertyPlaceHolder(x => x.CurrentPage.SupplementalNavigation))
 {
 	<h2>Supplemental Navigation</h2>
 	@Html.PropertyFor(x => x.CurrentPage.SupplementalNavigation)
@@ -12,7 +13,7 @@
 
 
 
-@if(Html.PropertyPlaceHolder(x => x.CurrentPage.HelpLinks))
+@if (Html.PropertyPlaceHolder(x => x.CurrentPage.HelpLinks))
 {
 	<h2>Help Links</h2>
 	@Html.PropertyFor(x => x.CurrentPage.HelpLinks)
@@ -39,7 +40,6 @@
 	<div class="o-width-limiter o-width-limiter--large">
 		<div class="c-header__inner">
 			<div class="c-header__logo">
-
 				<div class="c-logo">
 					<a class="c-logo__link" href="/home.html" title="Gå till webbplatsens startsida">
 						<img class="c-logo__image" src="/gui/images/logo.svg" alt="Logotyp" />
@@ -54,7 +54,9 @@
 						<h2 class="t-visually-hidden">Huvudnavigering</h2>
 						<ul class="c-main-navigation__list  o-list-inline@lg">
 							<li class="c-main-navigation__item  o-list-inline__item">
-								<a class="c-main-navigation__link" href="@Url.Action()">Hem</a>
+								<a class="c-main-navigation__link" href="@Url.Action(Layout)">Hem</a>
+								@Html.Components().Navigation(Model.Navigation)
+
 							</li>
 							<li class="c-main-navigation__item  o-list-inline__item">
 								<a class="c-main-navigation__link" href="#partners">Våra partners</a>
@@ -94,15 +96,14 @@
 			<div class="c-teaser">
 				<div class="c-teaser__header t-text-style-h3">
 					<div class="c-teaser__icon"></div>
-					@if(Html.PropertyPlaceHolder(x => x.CurrentPage.Teasers))
+					@if (Html.PropertyPlaceHolder(x => x.CurrentPage.Teasers))
 					{
 						<div>
-							<h3>Teasers</h3>
 							@Html.PropertyFor(x => x.CurrentPage.Teasers, new { CssClass = "o-grid row", ChildrenCssClass = "item" })
 						</div>
 					}
+				</div>
 			</div>
-		</div>
 		</div>
 	</div>
 </div>
@@ -137,7 +138,24 @@
 <div class="o-width-limiter o-section">
 	<h2 class="t-text-style-h2 o-section__headline">Kundreferenser</h2>
 	<div class="o-grid">
-		<div class="o-grid__column" data-size="sm:24 md:8 lg:8 xl:8">
+		<div class="o-width-limiter o-section">
+			<div class="o-grid">
+				<div class="o-grid__column">
+					<div class="c-teaser">
+						<div class="c-teaser__header t-text-style-h3">
+							<div class="c-teaser__icon"></div>
+							@if (Html.PropertyPlaceHolder(x => x.CurrentPage.ReferenceTeasers))
+							{
+								<div>
+									@Html.PropertyFor(x => x.CurrentPage.ReferenceTeasers, new { CssClass = "o-grid row", ChildrenCssClass = "item" })
+								</div>
+							}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		@*<div class="o-grid__column" data-size="sm:24 md:8 lg:8 xl:8">
 			<figure class="c-quote s-text">
 				<blockquote class="c-quote__body">
 					”Tack vare Fotbollsaffären har vår förening lyckats växa både med vår försäljning men även själva driften av verksamheten.”
@@ -166,7 +184,7 @@
 					<strong class="c-quote__author-name">Mats Mattsson</strong> Vikens IK
 				</figcaption>
 			</figure>
-		</div>
+		</div>*@
 	</div>
 </div>
 <div class="c-board o-section t-text-align-center s-text s-text--inverted" style="background-image: url(/gui/images/pictures/1200x400Sweden.jpg)">

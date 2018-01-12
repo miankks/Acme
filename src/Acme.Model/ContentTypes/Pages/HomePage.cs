@@ -24,6 +24,10 @@
         public virtual ContentArea Teasers { get; set; }
 
         [CultureSpecific]
+        [Display(GroupName = GroupNames.Tabs.Content, Order = 1130)]
+        public virtual ContentArea ReferenceTeasers { get; set; }
+
+        [CultureSpecific]
         [Display(GroupName = GroupNames.Tabs.Header, Order = 5010)]
         public virtual LinkItemCollection SupplementalNavigation { get; set; }
 
