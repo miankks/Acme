@@ -1,164 +1,267 @@
 ﻿@using EPiServer.Shell.Web.UI
 @model PageViewModel<HomePage>
 
-@if (Html.PropertyPlaceHolder(x => x.CurrentPage.SupplementalNavigation))
-{
-	<h2>Supplemental Navigation</h2>
-	@Html.PropertyFor(x => x.CurrentPage.SupplementalNavigation)
-}
-
-@*@Html.PropertyFor(x => x.CurrentPage.PageHeading, new { CustomTag = "h1" })
-@Html.PropertyFor(x => x.CurrentPage.MainIntro, new { CustomTag = "p" })
-@Html.PropertyFor(x => x.CurrentPage.MainBody)*@
-
-
-
-@if (Html.PropertyPlaceHolder(x => x.CurrentPage.HelpLinks))
-{
-	<h2>Help Links</h2>
-	@Html.PropertyFor(x => x.CurrentPage.HelpLinks)
-}
-
-
-<div class="c-skip">
-	<a class="c-skip__link" href="#content-primary">Hoppa till innehåll</a>
-</div>
-
-
-
-<div class="c-supplemental-navigation">
-	<div class="o-width-limiter o-width-limiter--large c-supplemental-navigation__inner">
-		<div class="c-supplemental-navigation__secondary">
-			<a href="/" class="c-share-icon c-share-icon--rss"><span class="t-visually-hidden">RSS</span></a>
-		</div>
-		<ul class="o-list-inline c-supplemental-navigation__primary">
-			<li class="o-list-inline__item c-supplemental-navigation__link c-supplemental-navigation__link--highlighted"><a href="#">fogis</a></li>
-		</ul>
+	<div class="c-skip">
+		<a class="c-skip__link" href="">Hoppa till innehåll</a>
 	</div>
-</div>
-<div class="c-header" role="banner" style="background-image: url(/gui/images/pictures/md2.jpg);">
-	<div class="o-width-limiter o-width-limiter--large">
-		<div class="c-header__inner">
-			<div class="c-header__logo">
-				<div class="c-logo">
-					<a class="c-logo__link" href="/home.html" title="Gå till webbplatsens startsida">
-						<img class="c-logo__image" src="/gui/images/logo.svg" alt="Logotyp" />
-					</a>
-				</div>
-			</div>
-			<div class="c-header__navigation">
-				<div class="c-navigation t-show-for-lg-up">
-					
 
-					<div class="c-main-navigation" role="navigation">
-						<h2 class="t-visually-hidden">Huvudnavigering</h2>
-						<ul class="c-main-navigation__list  o-list-inline@lg">
-							<li class="c-main-navigation__item  o-list-inline__item">
-								@*@Html.Components().Navigation(Model.Navigation)*@
-								@*@foreach (var item in Model.Navigation)
+
+
+	<div class="c-supplemental-navigation">
+		<div class="o-width-limiter o-width-limiter--large c-supplemental-navigation__inner">
+			<div class="c-supplemental-navigation__secondary">
+				<a href="/" class="c-share-icon c-share-icon--rss"><span class="t-visually-hidden">RSS</span></a>
+			</div>
+			<ul class="o-list-inline c-supplemental-navigation__primary">
+				<li class="o-list-inline__item c-supplemental-navigation__link c-supplemental-navigation__link--highlighted"><a href="#">fogis</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="c-header" role="banner" style="background-image: url(/gui/images/pictures/md2.jpg);">
+		<div class="o-width-limiter o-width-limiter--large">
+			<div class="c-header__inner">
+				<div class="c-header__logo">
+					<div class="c-logo">
+						<a class="c-logo__link" href="@Url.Action("Index", "HomePage")" title="Gå till webbplatsens startsida">
+							<img class="c-logo__image" src="/gui/images/logo.svg" alt="Logotyp" />
+						</a>
+					</div>
+				</div>
+				<div class="c-header__navigation">
+					<div class="c-navigation t-show-for-lg-up">
+
+
+						<div class="c-main-navigation" role="navigation">
+							<h2 class="t-visually-hidden">Huvudnavigering</h2>
+							<ul class="o-list-inline@lg">
+								<li class="o-list-inline__item">
+										 @Html.Components().Navigation(Model.Navigation)
+								</li>
+
+							</ul>
+						</div>
+					</div>
+					<div class="c-mobile-navigation t-show-on-md-down">
+						<button class="c-mobile-navigation__toggle-button"><span>Meny</span></button>
+						<ul class="c-mobile-navigation__list">
+							@*<li class="c-mobile-navigation__item">
+								@foreach (var item in Model.Navigation)
 								{
-									<a class="c-main-navigation__link" href="@Url.Action()">@item.Url</a>
-								}*@
-								@*<a class="c-main-navigation__link" href="@Html.Components().Navigation(Model.Navigation)">@Model.</a>*@
-							</li>
-							<li class="c-main-navigation__item  o-list-inline__item">
-								<a class="c-main-navigation__link" href="@Url.Action()">Våra partners</a>
-							</li>
-							<li class="c-main-navigation__item  o-list-inline__item">
-								<a class="c-main-navigation__link" href="#about">Om Fotbollsaffären</a>
-							</li>
-							<li class="c-main-navigation__item  o-list-inline__item">
-								<a class="c-main-navigation__link" href="#contact">Kontakta oss</a>
-							</li>
+									<a class="c-mobile-navigation__link" href="@item.Url">@item.Text</a>
+								}
+							</li>*@
+							<li class="c-mobile-navigation__item"><a class="c-mobile-navigation__link" href="#">Hem</a></li>
+							<li class="c-mobile-navigation__item"><a class="c-mobile-navigation__link" href="#">Våra partners</a></li>
+							<li class="c-mobile-navigation__item"><a class="c-mobile-navigation__link" href="#">Om Fotbollsaffären</a></li>
+							<li class="c-mobile-navigation__item"><a class="c-mobile-navigation__link" href="#">Kontakta oss</a></li>
 						</ul>
 					</div>
 				</div>
-				<div class="c-mobile-navigation t-show-on-md-down">
-					<button class="c-mobile-navigation__toggle-button"><span>Meny</span></button>
-					<ul class="c-mobile-navigation__list">
-						<li class="c-mobile-navigation__item"><a class="c-mobile-navigation__link" href="#">Hem</a></li>
-						<li class="c-mobile-navigation__item"><a class="c-mobile-navigation__link" href="#">Våra partners</a></li>
-						<li class="c-mobile-navigation__item"><a class="c-mobile-navigation__link" href="#">Om Fotbollsaffären</a></li>
-						<li class="c-mobile-navigation__item"><a class="c-mobile-navigation__link" href="#">Kontakta oss</a></li>
-					</ul>
-				</div>
 			</div>
-		</div>
-		<div class="c-header__hero c-hero o-width-limiter o-width-limiter--small s-text s-text--inverted">
-			<h1>Välkommen till Fotbollsaffären</h1>
-			<div class="c-hero__body">
-				<p>Det här är portalen som ger din förening möjligheter att skapa nya intäkter, reducera kostnader och utveckla föreningen. Anmäl dig till vårt nyhetsbrev så missar du inga erbjudanden!</p>
-			</div>
-			<a class="c-header__readmore" href="#">Läs mer</a>
-		</div>
-	</div>
-</div>
-<div class="o-width-limiter o-section">
-	<div class="o-grid">
-		<div class="o-grid__column">
-			<div class="c-teaser">
-				<div class="c-teaser__header t-text-style-h3">
-					<div class="c-teaser__icon"></div>
-					@if (Html.PropertyPlaceHolder(x => x.CurrentPage.Teasers))
-					{
-						<div>
-							@Html.PropertyFor(x => x.CurrentPage.Teasers, new { CssClass = "o-grid row", ChildrenCssClass = "item" })
-						</div>
-					}
+			<div class="c-header__hero c-hero o-width-limiter o-width-limiter--small s-text s-text--inverted">
+				<h1>Välkommen till Fotbollsaffären</h1>
+				<div class="c-hero__body">
+					<p>Det här är portalen som ger din förening möjligheter att skapa nya intäkter, reducera kostnader och utveckla föreningen. Anmäl dig till vårt nyhetsbrev så missar du inga erbjudanden!</p>
 				</div>
+				<a class="c-header__readmore" href="#">Läs mer</a>
 			</div>
 		</div>
 	</div>
-</div>
-<div class="c-board o-section s-text--inverted" style="background-image: url(/gui/images/pictures/zlatanshamrenpuff.jpg)">
-	<div class="o-width-limiter">
+	<div class="o-width-limiter o-section">
 		<div class="o-grid">
 			<div class="o-grid__column">
-				<figure class="c-blockquote c-blockquote--large">
-					<blockquote class="c-blockquote__body s-text">
-						Profilstarka varumärken i samverkan med en profilstark idrott - en god affär för din förening
-					</blockquote>
-					<figcaption class="c-blockquote__caption">
-						- Privab
-					</figcaption>
-				</figure>
-			</div>
-			<div class="o-grid__column s-text">
-				<p>
-					Välkända och marknadsledande produkter är en bidragande faktor till
-					att just din förening kan öka sin försäljning kring föreningens olika evenemang.
-				</p>
-				<p>
-					Under 2014 beställde 323 fotbollsföreningar produkter för ca 3.600.000 kr och utöver
-					försäljningsintäkten så utbetalades ytterligare 350.725 kr i royalty. Fördelen är att
-					föreningens royalty och andra förmåner vid inköp från Arenaförsäljningens sortiment
-					direkt från Privab redovisas och regleras helt automatiskt utan onödig administration.
-				</p>
+				<div class="c-teaser">
+					<div class="c-teaser__header t-text-style-h3">
+						<div class="c-teaser__icon"></div>
+						@if (Html.PropertyPlaceHolder(x => x.CurrentPage.Teasers))
+						{
+							<div>
+								@Html.PropertyFor(x => x.CurrentPage.Teasers, new { CssClass = "o-grid row", ChildrenCssClass = "item" })
+							</div>
+						}
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<div class="o-width-limiter o-section">
-	<h2 class="t-text-style-h2 o-section__headline">Kundreferenser</h2>
-	<div class="o-grid">
-		<div class="o-width-limiter o-section">
+	<div class="c-board o-section s-text--inverted" style="background-image: url(/gui/images/pictures/zlatanshamrenpuff.jpg)">
+		<div class="o-width-limiter">
 			<div class="o-grid">
-				<div class="o-grid__column">
-					<div class="c-teaser">
-						<div class="c-teaser__header t-text-style-h3">
-							<div class="c-teaser__icon"></div>
-							@if (Html.PropertyPlaceHolder(x => x.CurrentPage.ReferenceTeasers))
-							{
-								<div>
-									@Html.PropertyFor(x => x.CurrentPage.ReferenceTeasers, new { CssClass = "o-grid row", ChildrenCssClass = "item" })
-								</div>
-							}
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div class="o-grid__column">
+							<figure class="c-blockquote c-blockquote--large">
+								<blockquote class="c-blockquote__body s-text">
+									Profilstarka varumärken i samverkan med en profilstark idrott - en god affär för din förening
+								</blockquote>
+								<figcaption class="c-blockquote__caption">
+									- Privab
+								</figcaption>
+							</figure>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div class="o-grid__column s-text">
+							<p>
+								Välkända och marknadsledande produkter är en bidragande faktor till
+								att just din förening kan öka sin försäljning kring föreningens olika evenemang.
+							</p>
+							<p>
+								Under 2014 beställde 323 fotbollsföreningar produkter för ca 3.600.000 kr och utöver
+								försäljningsintäkten så utbetalades ytterligare 350.725 kr i royalty. Fördelen är att
+								föreningens royalty och andra förmåner vid inköp från Arenaförsäljningens sortiment
+								direkt från Privab redovisas och regleras helt automatiskt utan onödig administration.
+							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		@*<div class="o-grid__column" data-size="sm:24 md:8 lg:8 xl:8">
+	</div>
+	<div class="o-width-limiter o-section">
+		<h2 class="t-text-style-h2 o-section__headline">Kundreferenser</h2>
+		<div class="o-grid">
+			<div class="o-width-limiter o-section">
+				<div class="o-grid">
+					<div class="o-grid__column">
+						<div class="c-teaser">
+							<div class="c-teaser__header t-text-style-h3">
+								<div class="c-teaser__icon"></div>
+								@if (Html.PropertyPlaceHolder(x => x.CurrentPage.ReferenceTeasers))
+								{
+									<div>
+										@Html.PropertyFor(x => x.CurrentPage.ReferenceTeasers, new { CssClass = "o-grid row", ChildrenCssClass = "item" })
+									</div>
+								}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="c-board o-section t-text-align-center s-text s-text--inverted" style="background-image: url(/gui/images/pictures/1200x400Sweden.jpg)">
+		<div class="o-width-limiter">
+			<h2>Låt Fotbollsaffären hjälpa din förening att växa</h2>
+			<a href="#" class="c-button c-button--cta">Kontakta oss</a>
+		</div>
+	</div>
+	<div class="o-width-limiter o-section">
+		<div class="o-grid">
+			<div class="o-grid__column" data-size="sm:24 md:12 lg:12 xl:12">
+				<p>Missa aldrig att ta del av Fotbollsaffärens erbjudanden!</p>
+			</div>
+			<div class="o-grid__column" data-size="sm:24 md:12 lg:12 xl:12">
+				<form class="c-form s-form" action="" method="post">
+					<div class="c-form__item">
+						<label for="email">E-post</label>
+						<input id="email" type="email" name="email">
+					</div>
+					<div class="c-form__item">
+						<button type="submit" name="submit" value="Skicka" class="c-button">Skicka</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="c-footer" role="contentinfo">
+		<div class="o-width-limiter">
+			<h2 class="t-visually-hidden">Ytterligare information och kontaktuppgifter</h2>
+			<div class="o-grid">
+				<div class="o-grid__column">
+					<img class="c-footer__logo" src="/gui/images/logo-shield.svg" alt="SvFF">
+				</div>
+				<div class="o-grid__column">
+					<div class="o-grid">
+						<div class="o-grid__column">
+							<div class="c-footer__address">
+								<h2>Kontakta oss</h2>
+								<div class="vcard">
+									<div class="org fn">Svenska Fotbollförbundet</div>
+									<div class="adr">
+										<span class="street-address">Postadress: Box 1216</span>
+										<span class="postal-code">SE-171 23</span>
+										<span class="locality">Solna</span>
+									</div>
+									<div class="tel">
+										<strong class="type" title="voice">Tel:</strong>
+										<span class="value">+46-8-735 09 00</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="o-grid__column">
+							<div class="c-footer__menu">
+								<h2>Meny</h2>
+								<ul>
+									<li><a href="#">Hem</a></li>
+									<li><a href="#">Våra partners</a></li>
+									<li><a href="#">Om Fotbollsaffären</a></li>
+									<li><a href="#">Kontakta oss</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="o-grid__column c-footer__copy">
+							<p>&copy; Svenska Fotbollförbundet / The Swedish Football Association</p>
+							<p>Alla bilder på webbplatsen &copy; Bildbyrån om inget annat anges</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<ul class="o-list-inline c-footer__nav-supp">
+				<li class="o-list-inline__item"><a href="/sub-page.html">Webbkarta</a></li>
+				<li class="o-list-inline__item"><a href="/sub-page.html">Sök</a></li>
+				<li class="o-list-inline__item"><a href="/sub-page.html">Om svenskfotboll.se</a></li>
+				<li class="o-list-inline__item"><a href="/sub-page.html">Användning av Cookies</a></li>
+				<li class="o-list-inline__item"><a href="/sub-page.html">RSS</a></li>
+				<li class="o-list-inline__item"><a href="/sub-page.html">Annonsera</a></li>
+				<li class="o-list-inline__item"><a href="/sub-page.html">Widgets</a></li>
+			</ul>
+		</div>
+	</div>
+
+@*
+	at the top for supplemental navigation
+	@if (Html.PropertyPlaceHolder(x => x.CurrentPage.SupplementalNavigation))
+{
+	<h2>Supplemental Navigation</h2>
+	@Html.PropertyFor(x => x.CurrentPage.SupplementalNavigation)
+}*@
+
+@*@Html.PropertyFor(x => x.CurrentPage.PageHeading, new { CustomTag = "h1" })
+		@Html.PropertyFor(x => x.CurrentPage.MainIntro, new { CustomTag = "p" })
+		@Html.PropertyFor(x => x.CurrentPage.MainBody)*@
+
+
+
+@*@if (Html.PropertyPlaceHolder(x => x.CurrentPage.HelpLinks))
+	{
+		<h2>Help Links</h2>
+		@Html.PropertyFor(x => x.CurrentPage.HelpLinks)
+	}*@
+
+
+
+
+@*
+	Use for navigation
+	<a class="c-main-navigation__link" href="@Html.Components().Navigation(Model.Navigation)">@Model.</a>*@
+	@*<li class="c-main-navigation__item  o-list-inline__item">
+			<a class="c-main-navigation__link" href="@Url.Action()">Våra partners</a>
+		</li>
+		<li class="c-main-navigation__item  o-list-inline__item">
+			<a class="c-main-navigation__link" href="#about">Om Fotbollsaffären</a>
+		</li>
+		<li class="c-main-navigation__item  o-list-inline__item">
+			<a class="c-main-navigation__link" href="#contact">Kontakta oss</a>
+		</li>*@
+
+	@*<div class="o-grid__column" data-size="sm:24 md:8 lg:8 xl:8">
 			<figure class="c-quote s-text">
 				<blockquote class="c-quote__body">
 					”Tack vare Fotbollsaffären har vår förening lyckats växa både med vår försäljning men även själva driften av verksamheten.”
@@ -188,88 +291,3 @@
 				</figcaption>
 			</figure>
 		</div>*@
-	</div>
-</div>
-<div class="c-board o-section t-text-align-center s-text s-text--inverted" style="background-image: url(/gui/images/pictures/1200x400Sweden.jpg)">
-	<div class="o-width-limiter">
-		<h2>Låt Fotbollsaffären hjälpa din förening att växa</h2>
-		<a href="#" class="c-button c-button--cta">Kontakta oss</a>
-	</div>
-</div>
-<div class="o-width-limiter o-section">
-	<div class="o-grid">
-		<div class="o-grid__column" data-size="sm:24 md:12 lg:12 xl:12">
-			<p>Missa aldrig att ta del av Fotbollsaffärens erbjudanden!</p>
-		</div>
-		<div class="o-grid__column" data-size="sm:24 md:12 lg:12 xl:12">
-			<form class="c-form s-form" action="" method="post">
-				<div class="c-form__item">
-					<label for="email">E-post</label>
-					<input id="email" type="email" name="email">
-				</div>
-				<div class="c-form__item">
-					<button type="submit" name="submit" value="Skicka" class="c-button">Skicka</button>
-				</div>
-			</form>
-		</div>
-	</div>
-</div>
-
-<div class="c-footer" role="contentinfo">
-	<div class="o-width-limiter">
-		<h2 class="t-visually-hidden">Ytterligare information och kontaktuppgifter</h2>
-		<div class="o-grid">
-			<div class="o-grid__column">
-				<img class="c-footer__logo" src="/gui/images/logo-shield.svg" alt="SvFF">
-			</div>
-			<div class="o-grid__column">
-				<div class="o-grid">
-					<div class="o-grid__column">
-						<div class="c-footer__address">
-							<h2>Kontakta oss</h2>
-							<div class="vcard">
-								<div class="org fn">Svenska Fotbollförbundet</div>
-								<div class="adr">
-									<span class="street-address">Postadress: Box 1216</span>
-									<span class="postal-code">SE-171 23</span>
-									<span class="locality">Solna</span>
-								</div>
-								<div class="tel">
-									<strong class="type" title="voice">Tel:</strong>
-									<span class="value">+46-8-735 09 00</span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="o-grid__column">
-						<div class="c-footer__menu">
-							<h2>Meny</h2>
-							<ul>
-								<li><a href="#">Hem</a></li>
-								<li><a href="#">Våra partners</a></li>
-								<li><a href="#">Om Fotbollsaffären</a></li>
-								<li><a href="#">Kontakta oss</a></li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="o-grid__column c-footer__copy">
-						<p>&copy; Svenska Fotbollförbundet / The Swedish Football Association</p>
-						<p>Alla bilder på webbplatsen &copy; Bildbyrån om inget annat anges</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<ul class="o-list-inline c-footer__nav-supp">
-			<li class="o-list-inline__item"><a href="/sub-page.html">Webbkarta</a></li>
-			<li class="o-list-inline__item"><a href="/sub-page.html">Sök</a></li>
-			<li class="o-list-inline__item"><a href="/sub-page.html">Om svenskfotboll.se</a></li>
-			<li class="o-list-inline__item"><a href="/sub-page.html">Användning av Cookies</a></li>
-			<li class="o-list-inline__item"><a href="/sub-page.html">RSS</a></li>
-			<li class="o-list-inline__item"><a href="/sub-page.html">Annonsera</a></li>
-			<li class="o-list-inline__item"><a href="/sub-page.html">Widgets</a></li>
-		</ul>
-	</div>
-</div>

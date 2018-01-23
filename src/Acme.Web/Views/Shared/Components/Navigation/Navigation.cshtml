@@ -1,18 +1,17 @@
 ﻿@model List<NavigationItem>
 
 <div>
-	@*<h2>Navigation</h2>*@
+	
 	@foreach (var item in Model)
 	{
 		if (item.IsSelected || item.IsExpanded && item.IsStartPage == false)
 		{
-			
-
-					@SelectedItem(item)
+			<a class="c-main-navigation__link" href="@item.Url">@SelectedItem(item)</a>
 		}
 		else
 		{
-			@Item(item)
+			@*<a class="c-main-navigation__link" href="@item.Url">@Item(item)</a>*@
+			<a class="c-main-navigation__link" href="@item.Url">@item.Text</a>
 		}
 	}
 </div>
@@ -26,4 +25,3 @@
 {
 	<a href="@item.Url"><strong>@item.Text</strong></a>
 }
-

@@ -359,6 +359,7 @@
     <Content Include="Views\Shared\DisplayTemplates\XhtmlString.cshtml" />
     <Content Include="gui\js\Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Shared\Blocks\ReferenceBlock.cshtml" />
+    <Content Include="Views\AboutUs\Index.cshtml" />
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
