@@ -13,11 +13,11 @@
 
 
 
-@*@if (Html.PropertyPlaceHolder(x => x.CurrentPage.HelpLinks))
+@if (Html.PropertyPlaceHolder(x => x.CurrentPage.HelpLinks))
 {
 	<h2>Help Links</h2>
 	@Html.PropertyFor(x => x.CurrentPage.HelpLinks)
-}*@
+}
 
 
 <div class="c-skip">
@@ -53,11 +53,15 @@
 					<div class="c-main-navigation" role="navigation">
 						<h2 class="t-visually-hidden">Huvudnavigering</h2>
 						<ul class="c-main-navigation__list  o-list-inline@lg">
-							<li class="c-main-navigation__item  o-list-inline__item c-main-navigation__link">
-								@Html.Components().Navigation(Model.Navigation)
-								@*<a class="c-main-navigation__link" href="@Url.Action()">Hem</a>*@
+							<li class="c-main-navigation__item  o-list-inline__item">
+								@*@Html.Components().Navigation(Model.Navigation)*@
+								@*@foreach (var item in Model.Navigation)
+								{
+									<a class="c-main-navigation__link" href="@Url.Action()">@item.Url</a>
+								}*@
+								@*<a class="c-main-navigation__link" href="@Html.Components().Navigation(Model.Navigation)">@Model.</a>*@
 							</li>
-							@*<li class="c-main-navigation__item  o-list-inline__item">
+							<li class="c-main-navigation__item  o-list-inline__item">
 								<a class="c-main-navigation__link" href="@Url.Action()">Våra partners</a>
 							</li>
 							<li class="c-main-navigation__item  o-list-inline__item">
@@ -65,7 +69,7 @@
 							</li>
 							<li class="c-main-navigation__item  o-list-inline__item">
 								<a class="c-main-navigation__link" href="#contact">Kontakta oss</a>
-							</li>*@
+							</li>
 						</ul>
 					</div>
 				</div>
