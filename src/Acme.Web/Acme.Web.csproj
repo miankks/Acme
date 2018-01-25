@@ -310,6 +310,7 @@
     <Compile Include="Controllers\Pages\ContainerPageController.cs" />
     <Compile Include="Controllers\Pages\NoAccessPageController.cs" />
     <Compile Include="Controllers\Pages\NotFoundPageController.cs" />
+    <Compile Include="Controllers\Pages\OurPartnersPageController.cs" />
     <Compile Include="Controllers\Pages\StandardPageController.cs" />
     <Compile Include="Controllers\Pages\HomePageController.cs" />
     <Compile Include="Controllers\PreviewController.cs" />
@@ -360,6 +361,7 @@
     <Content Include="gui\js\Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Shared\Blocks\ReferenceBlock.cshtml" />
     <Content Include="Views\AboutUs\Index.cshtml" />
+    <Content Include="Views\OurPartnersPage\Index.cshtml" />
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

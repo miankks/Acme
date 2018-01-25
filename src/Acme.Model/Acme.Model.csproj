@@ -163,6 +163,7 @@
     <Compile Include="ContentTypes\Blocks\ReferenceBlock.cs" />
     <Compile Include="ContentTypes\ContentPageBase.cs" />
     <Compile Include="ContentTypes\MetaPageBase.cs" />
+    <Compile Include="ContentTypes\Pages\OurPartnersPage.cs" />
     <Compile Include="ContentTypes\PropertySettings\Plugins\ContextMenu.cs" />
     <Compile Include="ContentTypes\PropertySettings\Plugins\OptimizedEditor.cs" />
     <Compile Include="ContentTypes\SiteBlockBase.cs" />

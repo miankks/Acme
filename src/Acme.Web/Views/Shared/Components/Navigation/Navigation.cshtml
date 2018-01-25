@@ -1,19 +1,24 @@
 ﻿@model List<NavigationItem>
 
 <div>
-	
-	@foreach (var item in Model)
-	{
-		if (item.IsSelected || item.IsExpanded && item.IsStartPage == false)
+	<ul class="o-list-inline@lg">
+
+		@foreach (var item in Model)
 		{
-			<a class="c-main-navigation__link" href="@item.Url">@SelectedItem(item)</a>
-		}
-		else
-		{
-			@*<a class="c-main-navigation__link" href="@item.Url">@Item(item)</a>*@
-			<a class="c-main-navigation__link" href="@item.Url">@item.Text</a>
-		}
-	}
+			<li class="o-list-inline__item">
+				@*if (item.IsSelected || item.IsExpanded && item.IsStartPage == false)
+				{
+				<a class="c-main-navigation__link" href="@item.Url">@SelectedItem(item)</a>
+				}
+				else
+				{
+				<a class="c-main-navigation__link" href="@item.Url">@Item(item)</a>
+				}*@
+				<a class="c-main-navigation__link" href="@item.Url">@item.Text</a>
+			</li>
+			}
+	</ul>
+
 </div>
 
 @helper Item(NavigationItem item)

@@ -15,7 +15,8 @@
         Include = new[]
         {
             typeof(StandardPage),
-            typeof(SettingsFolder)
+            typeof(SettingsFolder),
+            typeof(OurPartnersPage)
         })]
     public class HomePage : ContentPageBase
     {
